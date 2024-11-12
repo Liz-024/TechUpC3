@@ -13,7 +13,17 @@
 
   <div class="container">
     <form id="searchForm" onsubmit="submitForm(event)">
-      <div class="form-group">
+        <div class="form-group">
+            <label for="mealType">Meal Type:</label>
+            <select id="mealType" required>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+            </select>
+          </div>
+
+        <div class="form-group">
         <label for="focus">Blood Sugar Focus:</label>
         <select id="focus" required>
           <option value="low-gi">Low GI</option>
@@ -36,7 +46,7 @@
       <button type="submit">Find Meals</button>
     </form>
 
-    <button onclick="showRandomRecommendation()">Random Recommendation</button>
+    <button onclick="showRandomRecommendation()">Can't Decide? Click here for a Random Recommendation</button>
     <div id="randomRecommendation" class="food-item"></div>
   </div>
 

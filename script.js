@@ -1,10 +1,10 @@
 // Sample food data with images
 const foodData = [
-    { name: 'Chicken Salad', focus: 'low-gi', restriction: 'halal', price: '10', type: 'hawker', image: 'https://example.com/chicken-salad.jpg' },
-    { name: 'Veggie Wrap', focus: 'low-sugar', restriction: 'nut-free', price: '8', type: 'fast-food', image: 'https://example.com/veggie-wrap.jpg' },
-    { name: 'Smoothie Bowl', focus: 'low-carb', restriction: 'dairy-free', price: '12', type: 'cafe', image: 'https://example.com/smoothie-bowl.jpg' },
-    { name: 'Tofu Stir-fry', focus: 'low-fat', restriction: 'halal', price: '9', type: 'hawker', image: 'https://example.com/tofu-stirfry.jpg' },
-    { name: 'Grilled Fish', focus: 'low-gi', restriction: 'none', price: '14', type: 'restaurant', image: 'https://example.com/grilled-fish.jpg' }
+    { name: 'Chicken Salad', mealType: 'lunch', focus: 'low-gi', restriction: 'halal', price: '10', type: 'hawker', image: 'https://example.com/chicken-salad.jpg' },
+    { name: 'Veggie Wrap', mealType: 'breakfast', focus: 'low-sugar', restriction: 'nut-free', price: '8', type: 'fast-food', image: 'https://example.com/veggie-wrap.jpg' },
+    { name: 'Smoothie Bowl', mealType: 'snack',focus: 'low-carb', restriction: 'dairy-free', price: '12', type: 'cafe', image: 'https://example.com/smoothie-bowl.jpg' },
+    { name: 'Tofu Stir-fry', mealType: 'dinner',focus: 'low-fat', restriction: 'halal', price: '9', type: 'hawker', image: 'https://example.com/tofu-stirfry.jpg' },
+    { name: 'Grilled Fish', mealType: 'dinner',focus: 'low-gi', restriction: 'none', price: '14', type: 'restaurant', image: 'https://example.com/grilled-fish.jpg' }
   ];
   
   // Function to handle form submission
@@ -12,8 +12,10 @@ const foodData = [
     event.preventDefault();
     const focus = document.getElementById('focus').value;
     const restriction = document.getElementById('restriction').value;
+    const mealType = document.getElementById('mealType').value;
     localStorage.setItem('focus', focus);
     localStorage.setItem('restriction', restriction);
+    localStorage.setItem('mealType', mealType);
     window.location.href = 'results.html';
   }
   
@@ -21,12 +23,14 @@ const foodData = [
   function loadResults() {
     const focus = localStorage.getItem('focus');
     const restriction = localStorage.getItem('restriction');
+    const mealType = localStorage.getItem('mealType');
     
     // Filter food data
     const results = foodData.filter(food => {
       return (
         food.focus === focus &&
-        (restriction === 'none' || food.restriction === restriction)
+        (restriction === 'none' || food.restriction === restriction) &&
+        food.mealType === mealType
       );
     });
   
@@ -51,6 +55,8 @@ const foodData = [
   
   // Function to show a random healthy food recommendation
   function showRandomRecommendation() {
+    const mealType = document.getElementById('mealType').value;
+    const filteredFoodData = foodData.filter(food => food.mealType === mealType);
     const randomFood = foodData[Math.floor(Math.random() * foodData.length)];
     const randomDiv = document.getElementById('randomRecommendation');
     randomDiv.innerHTML = `<img src="${randomFood.image}" alt="${randomFood.name}">
@@ -62,5 +68,9 @@ const foodData = [
   // Load results if on results.html page
   if (window.location.pathname.includes('results.html')) {
     window.onload = loadResults;
+  }
+  
+  function goBackToSearch() {
+    window.location.href = 'index.html';
   }
   
