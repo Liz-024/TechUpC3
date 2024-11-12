@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheapCleanEats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>CheapCleanEats</h1>
+  <p>Find affordable, diabetic-friendly meals in Singapore</p>
+
+  <div class="container">
+    <form id="searchForm" onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label for="focus">Blood Sugar Focus:</label>
+        <select id="focus" required>
+          <option value="low-gi">Low GI</option>
+          <option value="low-sugar">Low Sugar</option>
+          <option value="low-carb">Low Carb</option>
+          <option value="low-fat">Low Fat</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="restriction">Dietary Restrictions:</label>
+        <select id="restriction">
+          <option value="none">None</option>
+          <option value="halal">Halal</option>
+          <option value="nut-free">Nut Allergy</option>
+          <option value="dairy-free">Dairy Allergy</option>
+        </select>
+      </div>
+
+      <button type="submit">Find Meals</button>
+    </form>
+
+    <button onclick="showRandomRecommendation()">Random Recommendation</button>
+    <div id="randomRecommendation" class="food-item"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
