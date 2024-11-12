@@ -3,7 +3,7 @@ const foodData = [
   { name: 'Chicken Salad', mealType: 'lunch', focus: 'low-gi', restriction: 'halal', price: '10', type: 'hawker', image: 'https://example.com/chicken-salad.jpg' },
   { name: 'Veggie Wrap', mealType: 'lunch', focus: 'low-sugar', restriction: 'nut-free', price: '8', type: 'fast-food', image: 'https://example.com/veggie-wrap.jpg' },
   { name: 'Smoothie Bowl', mealType: 'snack', focus: 'low-carb', restriction: 'dairy-free', price: '12', type: 'cafe', image: 'https://example.com/smoothie-bowl.jpg' },
-  { name: 'Tofu Stir-fry', mealType: 'breakfast', focus: 'low-fat', restriction: 'halal', price: '9', type: 'hawker', image: 'https://example.com/tofu-stirfry.jpg' },
+  { name: 'Tofu Stir-fry', mealType: 'breakfast', focus: 'low-calorie', restriction: 'halal', price: '9', type: 'hawker', image: 'https://example.com/tofu-stirfry.jpg' },
   { name: 'Grilled Fish', mealType: 'dinner', focus: 'low-gi', restriction: 'none', price: '14', type: 'restaurant', image: 'https://example.com/grilled-fish.jpg' }
 ];
 
