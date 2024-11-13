@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #e1f2f57f;
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,8 +10,13 @@ body {
   }
   
   h1 {
-    color: #4caf50;
-    margin-top: 20px;
+    color:#0f5a8f;
+    margin-top: 30px;
+  }
+
+  h3 {
+    color:black;
+    font-style: italic;
   }
   
   .container {
@@ -31,7 +36,8 @@ body {
   label {
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size:100%
   }
   
   input[type="text"], select {
@@ -39,21 +45,24 @@ body {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size:100%
   }
   
   button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
+    background-color: #408EC6;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
+    font: size 15px;
+    font-weight:bold;
   }
   
   button:hover {
-    background-color: #3e8e41;
+    background-color: #0f5a8f;
   }
   
   .results {
@@ -70,8 +79,8 @@ body {
   }
   
   .food-item img {
-    width: 100%;
-    max-width: 200px;
+    width: 300%;
+    max-width: 300px;
     border-radius: 8px;
   }
 
@@ -82,14 +91,17 @@ body {
   
   .back-button button {
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color:#408EC6;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight:bold
   }
   
   .back-button button:hover {
-    background-color: #3e8e41;
+    background-color:  #0f5a8f;
   }
   
