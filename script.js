@@ -1,13 +1,15 @@
 // Sample food data with images
 const foodData = [
-  { name: 'Thunder Tea with Brown Rice', mealType: ['lunch', 'dinner'], focus: ['low-gi'], restriction: ['vegetarian','dairy-free'], info: 'This high-fibre dish makes you feel full longer, and helps slow down the digestion and absorption of glucose. Brown rice, which has a lower glycemic index (GI) will also cause a smaller blood glucose spike after a meal.', type: 'hawker', image: 'Images/FA1C329A-8A38-4D38-88EF-FF20C88C4487.PNG'},
-  { name: 'Sliced Fish Noodle Soup', mealType: ['lunch', 'dinner'], focus: ['low-carb', 'low-calorie'], restriction: ['nut-free'], info: 'This dish is relatively lower in carbs and calories compared to its other noodly companions. Opt for brown rice, if available, for a Low-GI option!', type: 'hawker', image: 'https://example.com/veggie-wrap.jpg' },
-  { name: 'Chapati with Dal', mealType: ['snack','breakfast','lunch'], focus: ['low-gi'], restriction: ['vegetarian'], info: 'If you are a fan of prata, switch it out for chapati instead! Made with wholemeal flour, it has a lower GI, which will cause a smaller blood sugar spike. Pair with dal (lentils) or a chickpea curry for a yummy protein.', type: 'hawker', image: 'https://example.com/smoothie-bowl.jpg' },
-  { name: 'Popiah', mealType: ['breakfast','snack'], focus: ['low-calorie'], restriction: ['vegetarian'], info: 'Popiah typically contains plenty of vegetables (e.g., turnips, carrots, bean sprouts) which are a great source of fibre and vitamins. One serving is about 180kcals. Avoid adding sweet sauce to it, or have a little on the side!', type: 'hawker', image: 'https://example.com/tofu-stirfry.jpg' },
-  { name: 'Soft-Boiled Eggs with Toast', mealType: ['breakfast'], focus: ['low-sugar', 'low-gi'], restriction: ['halal'], info: 'Soft boiled eggs can be a source of low-fat protein, to help lower the blood glucose spike. Opt for wholegrain toast for a low-GI option. If you need a spread, choose peanut butter instead of kaya for a lower sugar content!', type: ['hawker','cafe'], image: 'https://example.com/grilled-fish.jpg' },
-  { name: 'Beancurd', mealType: ['snack','breakfast'], focus: ['low-sugar','low-calorie'], restriction: ['vegetarian','dairy-free'], info: 'If you are craving a light snack, enjoy a hot or cold bowl of soy beancurd. A good source of protein, and roughly 109kcal a bowl. Swap out sugar syrup with soybean milk for more protein!', type: ['hawker','shop'], image: 'https://example.com/grilled-fish.jpg' },
-  { name: 'Grilled Fish', mealType: 'dinner', focus: ['low-gi'], restriction: ['none'], info: '14', type: 'restaurant', image: 'https://example.com/grilled-fish.jpg' },
-  { name: 'Grilled Fish', mealType: 'dinner', focus: ['low-gi'], restriction: ['none'], info: '14', type: 'restaurant', image: 'https://example.com/grilled-fish.jpg' }
+  { name: 'Thunder Tea with Brown Rice', mealType: ['lunch', 'dinner'], focus: ['low-gi'], restriction: ['none','vegetarian','dairy-free'], info: 'This high-fibre dish makes you feel full longer, and helps slow down the digestion and absorption of glucose. Brown rice, which has a lower glycemic index (GI) will also cause a smaller blood glucose spike after a meal.', type: 'hawker', image: 'Images/Leicha.png'},
+  { name: 'Sliced Fish Noodle Soup', mealType: ['lunch', 'dinner'], focus: ['low-carb', 'low-calorie'], restriction: ['none','nut-free'], info: 'This dish is relatively lower in carbs and calories compared to its other noodly companions. Opt for brown rice, if available, for a Low-GI option!', type: 'hawker', image: 'Images/Slicefishsoup .png' },
+  { name: 'Chapati with Dal', mealType: ['breakfast','lunch'], focus: ['low-gi'], restriction: ['none','vegetarian'], info: 'If you are a fan of prata, switch it out for chapati instead! Made with wholemeal flour, it has a lower GI, which will cause a smaller blood sugar spike. Pair with dal (lentils) or a chickpea curry for a yummy protein.', type: 'hawker', image: 'Images/Chapati.png' },
+  { name: 'Popiah', mealType: ['breakfast','snack'], focus: ['low-calorie'], restriction: ['none','vegetarian'], info: 'Popiah typically contains plenty of vegetables (e.g., turnips, carrots, bean sprouts) which are a great source of fibre and vitamins. One serving is about 180kcals. Avoid adding sweet sauce to it, or have a little on the side!', type: 'hawker', image: 'Images/Popiah.png' },
+  { name: 'Soft-Boiled Eggs with Toast', mealType: ['breakfast'], focus: ['low-sugar', 'low-gi'], restriction: ['none', 'halal'], info: 'Soft boiled eggs can be a source of low-fat protein, to help lower the blood glucose spike. Opt for wholegrain toast for a low-GI option. If you need a spread, choose peanut butter instead of kaya for a lower sugar content!', type: ['hawker','cafe'], image: 'Images/Eggntoast .png' },
+  { name: 'Beancurd', mealType: ['snack','breakfast'], focus: ['low-sugar','low-calorie'], restriction: ['none','vegetarian','dairy-free','halal'], info: 'If you are craving a light snack, enjoy a hot or cold bowl of soy beancurd. A good source of protein, and roughly 109kcal a bowl. Swap out sugar syrup with soybean milk for more protein!', type: ['hawker','shop'], image: 'Images/Beancurd.png' },
+  { name: 'Bee Hoon Soto', mealType: ['breakfast','lunch'], focus: ['low-gi', 'low-calorie'], restriction: ['none','halal'], info: 'Bee Hoon has a lower GI (<55), and contains lower sodium content compared to yellow noodles. With eggs and veggies, this filling dish offers protein and fibre at just 360kcal a bowl!', type: 'hawker', image: 'Images/Beehoonsoto.png' },
+  { name: 'Wholemeal/Grain Sandwich', mealType: ['lunch','snack'], focus: ['low-gi'], restriction: ['none'], info: 'Wholemeal or multigrain bread has a lower GI. Add a good protein like roast chicken, tuna or egg with low-fat mayo for a filling snack or meal!', type: ['cafe','shop'], image: 'Images/Sandwich.png' },
+  { name: 'Chin Chow (no syrup)', mealType: ['snack'], focus: ['low-sugar'], restriction: ['none','nut-free','dairy-free'], info: 'Plain grass jelly contains about 3% of carbohydrates, and can be enjoyed with low/no-sugar soymilk!', type: ['hawker','shop'], image: 'Images/Chinchow .png' },
+  { name: 'Yong Tau Foo', mealType: ['lunch','dinner'], focus: ['low-carb'], restriction: ['none'], info: 'Yong Tau Foo is a great choice if you crave variety! Opt for leafy greens, ask for a smaller portion of carbs and avoid fried items. Be careful not to finish the soup or get it dry, as the soup bases can be high in sodium!', type: 'hawker', image: 'Images/Ytf.png' }
 ];
 
 // Function to handle form submission
@@ -30,10 +32,10 @@ function loadResults() {
   // Filter food data
   const results = foodData.filter(food => {
     return (
-      food.focus.includes(focus) &&
-      (restriction === 'none' || food.restriction.includes(restriction)) &&
-      food.mealType.includes(mealType)
-    );
+      food.mealType.includes(mealType) &&
+      (focus === 'none' || food.focus.includes(focus) &&
+      (restriction === 'none' || food.restriction === restriction)
+      ));
   });
 
   // Display results
@@ -62,10 +64,10 @@ function showRandomRecommendation() {
   const randomDiv = document.getElementById('randomRecommendation');
   randomDiv.innerHTML = `<img src="${randomFood.image}" alt="${randomFood.name}"><br>
                          <strong>${randomFood.name}</strong><br>
-                         Type: ${randomFood.type}<br>
-                         Focus: ${randomFood.focus}<br>
-                         Restriction: ${randomFood.restriction}<br>
-                         Info: ${randomFood.info}`;
+                         <strong>Type</strong>: ${randomFood.type}<br>
+                         <strong>Focus</strong>: ${randomFood.focus}<br>
+                         <strong>Restriction</strong>: ${randomFood.restriction}<br><br>
+                         <strong>Info</strong>: ${randomFood.info}`;
 }
 
 // Load results if on results.html page
