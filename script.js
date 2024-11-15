@@ -31,14 +31,36 @@ function loadResults() {
   const focus = localStorage.getItem('focus');
   const restriction = localStorage.getItem('restriction');
   const mealType = localStorage.getItem('mealType');
-  // Filter food data
-  const results = foodData.filter(food => {
-    return (
-      food.mealType.includes(mealType) &&
-      (focus === 'none' || food.focus.includes(focus) &&
-      (restriction === 'none' || food.restriction === restriction)
-      ));
-  });
+
+  let results;
+  if (focus === 'none' && restriction === 'none') {
+    // Case 1: Both focus and restriction are "none"
+    results = foodData.filter(food => 
+      food.mealType.includes(mealType)
+    );
+
+  } else if (focus === 'none') {
+    // Case 2: Focus is "none," filter by restriction and meal type
+    results = foodData.filter(food => 
+      food.mealType.includes(mealType) && 
+      food.restriction.includes(restriction)
+    );
+
+  } else if (restriction === 'none') {
+    // Case 3: Restriction is "none," filter by focus and meal type
+    results = foodData.filter(food => 
+      food.mealType.includes(mealType) && 
+      food.focus.includes(focus)
+    );
+
+  } else {
+    // Case 4: Both focus and restriction are specified
+    results = foodData.filter(food => 
+      food.mealType.includes(mealType) && 
+      food.restriction.includes(restriction) && 
+      food.focus.includes(focus)
+    );
+  }
 
   // Display results
   const resultsDiv = document.getElementById('results');
