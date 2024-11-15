@@ -16,7 +16,6 @@ body {
 
   h3 {
     color:black;
-    font-style: italic;
   }
   
   .container {
@@ -103,5 +102,11 @@ body {
   
   .back-button button:hover {
     background-color:  #0f5a8f;
+  }
+  footer {background-color: #f8f9fa; 
+    padding: 10px; 
+    text-align: left; 
+    font-size: 0.7em; 
+    color: #555;
   }
   

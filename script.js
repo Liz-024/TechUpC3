@@ -71,7 +71,7 @@ function loadResults() {
       const foodDiv = document.createElement('div');
       foodDiv.className = 'food-item';
       foodDiv.innerHTML = `<img src="${food.image}" alt="${food.name}"><br>
-                           <strong>${food.name}</strong><br><br>
+                           <strong><u>${food.name}</u></strong><br><br>
                            <strong>Type</strong>: ${food.type}<br><br>
                            <strong>Info</strong>: ${food.info}`;
       resultsDiv.appendChild(foodDiv);
@@ -87,10 +87,10 @@ function showRandomRecommendation() {
   const randomFood = foodData[Math.floor(Math.random() * foodData.length)];
   const randomDiv = document.getElementById('randomRecommendation');
   randomDiv.innerHTML = `<img src="${randomFood.image}" alt="${randomFood.name}"><br>
-                         <strong>${randomFood.name}</strong><br>
+                         <strong><u>${randomFood.name}</u></strong><br><br>
                          <strong>Type</strong>: ${randomFood.type}<br>
                          <strong>Focus</strong>: ${randomFood.focus}<br>
-                         <strong>Restriction</strong>: ${randomFood.restriction}<br><br>
+                         <strong>Dietary Restriction</strong>: ${randomFood.restriction}<br><br>
                          <strong>Info</strong>: ${randomFood.info}`;
 }
 
